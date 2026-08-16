@@ -69,12 +69,64 @@ h6 {
   text-wrap: balance;
 }
 
-/*
-  10. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
+/* CSS Variables */
+
+:root {
+  --background-color: #808000;
+  --txt-color: #000000;
+  --txt-accent: #c1440e;
+  --txt-licht: #f5f1e6;
+  --txt-font: "Google Sans", Arial, Helvetica, sans-serif;
 }
 
 /* algemene styling */
+
+body {
+  background-color: var(--background-color);
+  color: var(--txt-color);
+  font-family: var(--txt-font);
+}
+
+img{
+    border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  gap: 25px;
+  flex-wrap: nowrap;
+  background-color: var(--txt-licht);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px;
+  min-height: 600px;
+}
+
+.txt-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    line-height: 1.75;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.link-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    align-content: stretch;
+    justify-content: center;
+    gap: 15px;
+}
